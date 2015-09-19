@@ -1,0 +1,24 @@
+{
+  "name": "M. Kalden",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Tronjer/kickoff2",
+  "authors": [
+    "Matthias Kalden <matthias.kalden@esanum.de>"
+  ],
+  "description": "Toolchain for angular animate",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-route": "~1.4.6",
+    "angular-material": "~0.11.0",
+    "angular-animate": "~1.4.6",
+    "angular-aria": "~1.4.6",
+  }
+}
