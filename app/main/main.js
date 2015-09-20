@@ -6,6 +6,6 @@
   main.controller('MainController', ['$scope', '$log', function($scope, $log){
   	$log.debug('In MainController');
 
-  	$scope.foo = 'Hello World';
+  	$scope.test = 'main.tpl.html';
   }]);
 })(angular);

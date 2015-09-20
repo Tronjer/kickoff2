@@ -6,7 +6,7 @@ module.exports = {
   express: {
     files: [
     	'<%= config.path.dist %>/**/*.html',
-    	'<%= config.path.dist %>/js/*.js',
+    	'<%= config.path.dist %>/js',
     	'<%= config.path.dist %>/css',
     	'<%= config.path.dist %>/img'
     ],
