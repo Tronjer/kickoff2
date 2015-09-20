@@ -4,6 +4,9 @@
 
 	var myApp = angular.module('myApp', [
 		'ngRoute',
+		'ngAnimate',
+		'ngAria',
+		'ngMaterial',
     'main'
   ]);
 
