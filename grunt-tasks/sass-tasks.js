@@ -7,6 +7,7 @@ module.exports = {
       ],
       sassDir: '<%= config.path.src %>/<%= config.path.styles %>',
       cssDir: '<%= config.path.dist %>/css',
+      imagesDir: '<%= config.path.dist %>/img',
       outputStyle: 'compressed',
       relativeAssets: true
     }
