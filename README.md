@@ -8,9 +8,13 @@
 ### Requirements
 > Node, Bower, Grunt, Sass and Compass
 
-# Run
+### Run
 - npm install
 - bower install
 - grunt (at console inside project root)
+
+### Release History
+* 2015-09-20 v0.1.0 Initial release
+
 
 
