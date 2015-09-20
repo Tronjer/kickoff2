@@ -1,7 +1,4 @@
 module.exports = {
-  /**
-  ** Minifies Angular libs
-  **/
   options: {
   	singleQuotes: true
   },

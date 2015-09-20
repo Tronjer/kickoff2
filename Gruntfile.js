@@ -5,7 +5,9 @@ module.exports = function (grunt) {
         path: {
         	src: 'app',
         	dist: 'dist',
-          bower_components: 'bower_components'
+          libs: 'libs',
+          styles: 'assets/styles',
+          bower_components: 'libs/bower_components'
         }
       };
 
@@ -19,17 +21,15 @@ module.exports = function (grunt) {
     clean: require('./grunt-tasks/clean-tasks.js'),
     express: require('./grunt-tasks/server-tasks.js'),
     watch: require('./grunt-tasks/watch-tasks.js'),
+    jshint: require('./grunt-tasks/jshint-tasks.js'),
     uglify: require('./grunt-tasks/uglify-tasks.js'),
-    ngAnnotate: require('./grunt-tasks/ng-annotate-tasks.js')
+    ngAnnotate: require('./grunt-tasks/ng-annotate-tasks.js'),
+    compass: require('./grunt-tasks/sass-tasks.js'),
 
 	});
 
-	if ( env == 'production' ) {
-    grunt.registerTask('build', ['clean:dist']);
-  } else {
-    grunt.registerTask('build', ['clean:dist', 'copy', 'ngAnnotate', 'uglify', 'express', 'watch']);
-  }
+	
+  grunt.registerTask('default', ['clean:dist', 'copy', 'compass', 'ngAnnotate', 'jshint', 'uglify', 'express', 'watch']);
 
 
-	grunt.registerTask('default', ['build']);
 };

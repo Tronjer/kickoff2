@@ -1,7 +1,4 @@
 module.exports = {
-  /**
-  ** Watches File changes
-  **/
 	options: {
 		livereload: true,
     spawn: false
@@ -10,8 +7,8 @@ module.exports = {
     files: [
     	'<%= config.path.dist %>/**/*.html',
     	'<%= config.path.dist %>/js/*.js',
+    	'<%= config.path.dist %>/css'
     ],
-
     tasks: 'express'
   },
 	copy: {
@@ -20,10 +17,22 @@ module.exports = {
 		],
 		tasks: 'copy'
 	},
+	jshint: {
+		files: [
+			'Gruntfile.js',
+			'<%= config.path.src %>/**/*.js', 
+			'!<%= config.path.src %>/app.js'
+		],
+		tasks: 'jshint'
+	},
 	uglify: {
 		files: [
 			'<%= config.path.src %>/**/*.js'
 		],
 		tasks: 'uglify'
+	},
+	compass: {
+		files: '<%= config.path.src %>/<%= config.path.styles %>/**/*.scss',
+		tasks: 'compass'
 	}
 };

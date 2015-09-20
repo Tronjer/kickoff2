@@ -1,26 +1,22 @@
 module.exports = {
-  /*
-  ** 
-  */
   main: {
     files: [
 
-      // index.html
+      // html
       {
         expand: true,
 				cwd: '<%= config.path.src %>',
-				src: '*.html',
+				src: '**/*.html',
 				dest: '<%= config.path.dist %>'
       },
-
-      // all but index.html to /templates
+      
+      // fontawesome
       {
         expand: true,
-        cwd: '<%= config.path.src %>',
-        src: ['**/*.html','!*.html'],
-        dest: '<%= config.path.dist %>/templates/'
+        cwd: '<%= config.path.bower_components %>/font-awesome/fonts',
+        src: ['**'],
+        dest: '<%= config.path.dist %>/fonts/'
       }
-     
     ]
   }
 };
