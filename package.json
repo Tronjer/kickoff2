@@ -29,5 +29,8 @@
     "grunt-ng-annotate": "^1.0.1",
     "jshint-stylish": "^2.0.1",
     "load-grunt-tasks": "^3.2.0"
+  },
+  "dependencies": {
+    "angular-new-router": "^0.5.3"
   }
 }

@@ -26,6 +26,6 @@ module.exports = function (grunt) {
     compass: require('./grunt-tasks/sass-tasks.js'),
     imagemin: require('./grunt-tasks/image-tasks.js')
 	});
-	
+
   grunt.registerTask('default', ['clean:dist', 'copy', 'imagemin', 'compass', 'ngAnnotate', 'jshint', 'uglify', 'express', 'watch']);
 };
