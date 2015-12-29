@@ -1,25 +1,30 @@
-(function (angular) {
-
+(function () {
 	'use strict';
 
-	var myApp = angular.module('myApp', [
+	angular.module('myApp', [
+		'ngNewRouter',
 		'ngRoute',
 		'ngAnimate',
 		'ngAria',
 		'ngMaterial',
-    'main'
-  ]);
+		'navigation',
+    'home'
+  ])
 
-	myApp.config(['$routeProvider',function($routeProvider) {
-		$routeProvider
-			.when('/', {
-				templateUrl: 'main/main.tpl.html',
-				controller: 'MainController'
-			})
-			.otherwise({
-        redirectTo: '/'
-      });
-	}]);
+  .directive('mainNavigation', function(){
+  	return {
+  		scope: {},
+  		controller: 'NavigationController',
+  		controllerAs: 'navctrl',
+  		templateUrl: 'components/navigation/navigation.html',
+  		replace: true,
+  		restrict: 'E'
+  	};
+  })
 
-
-})(angular);
+  .controller('AppController', ['$router', function($router){
+  	$router.config([
+			{ path: '/', component: 'home' }
+  	]);
+  }]);
+})();

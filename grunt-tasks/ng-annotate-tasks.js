@@ -10,7 +10,7 @@ module.exports = {
     	'<%= config.path.bower_components %>/angular-animate/angular-animate.min.js',
     	'<%= config.path.bower_components %>/angular-aria/angular-aria.min.js',
 
-      // because it's still not available as bower module
+      // until now (2015) new angular router is only available as node module
       'node_modules/angular-new-router/dist/router.es5.js',
   	],
   	dest: '<%= config.path.dist %>/js/libs.js'
